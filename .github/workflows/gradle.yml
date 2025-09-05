@@ -19,11 +19,11 @@ jobs:
       - name: Make Gradle executable
         run: chmod +x gradlew
 
-      - name: Build Oraxen
+      - name: Build Oraxen JAR
         run: ./gradlew core:build
 
-      - name: Upload JAR
-        uses: actions/upload-artifact@v3
+      - name: Upload JAR artifact
+        uses: actions/upload-artifact@v4
         with:
           name: oraxen-jar
           path: core/build/libs/*.jar
